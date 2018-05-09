@@ -2,10 +2,10 @@
 
 let json = null;
 if (document.body.getElementsByTagName("*").length === 1 && document.body.getElementsByTagName("pre").length === 1)
-	json = parseJSON(document.body.getElementsByTagName("pre")[0].innerHTML);
+	json = parseJSON(document.body.getElementsByTagName("pre")[0].textContent);
 
 if (!json)
-	json = parseJSON(document.body.innerHTML);
+	json = parseJSON(document.body.textContent);
 
 if (json) {
 	document.body.textContent = "";
